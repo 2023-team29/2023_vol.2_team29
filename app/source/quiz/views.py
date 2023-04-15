@@ -29,7 +29,7 @@ def match(request):
         form = AnswerForm(request.POST)
         if form.is_valid():
            answer = form.cleaned_data['answer'] 
-           
+
 
 
     else:
@@ -39,4 +39,16 @@ def show_answer(request):
     """
     正誤表示
     """
+    return render(request, 'quiz/answer.html', {})
 
+def correct(request):
+    """
+    正解画面
+    """
+    return render(request, 'quiz/match.html', {})
+
+def incorrect(request):
+    """
+    不正解画面
+    """
+    return render(request, 'quiz/match.html', {})
