@@ -29,18 +29,22 @@ def match(request):
         form = AnswerForm(request.POST)
         if form.is_valid():
            answer = form.cleaned_data['answer']
+
+           if a == b:
+               #正解
+               redirect('correct')
+           else:
+               #不正解
+               redirect('incorrect')
            
+        else:
+            render(request, 'match.html', {'form': form})
         
 
 
     else:
-        return render(request, 'match.html', {})    
+        return render(request, 'match.html', {'form': form})    
 
-def show_answer(request):
-    """
-    正誤表示
-    """
-    return render(request, 'answer.html', {})
 
 def correct(request):
     """
