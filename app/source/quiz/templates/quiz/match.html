@@ -57,10 +57,9 @@
 		
 			<h3>問題：</h3>
 			<p class="question">問題文が表示されます</p>
-		<!--	<button onclick="showInputBox()">入力する</button> -->
 			<img id="botton-image" src="/static/images/image (16).png" alt="botton" onclick="showInputBox()">
 			<div id="input-box">
-			<form method="POST">
+			<form method="POST" action="/answer">
 				<input type="text" id="answer-input" name="answer-input">
 				<button type="submit" onclick="checkAnswer()">確定</button>
 			</form>

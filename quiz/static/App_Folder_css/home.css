@@ -7,15 +7,23 @@ body {
 }
 
 header {
+    display: flex;
+    align-items: center;
+	flex-direction: column;
+	text-align: center;
 	background-color: pink;
 	color: white;
 	padding: 10px;
 }
 
 h1 {
+	text-align: center;
 	margin: 0 auto;
 	width: 100%;
-	height: 200px;
+}
+
+body {
+	width: 100%;
 }
 
 main {
@@ -46,3 +54,32 @@ footer {
 	background-color: pink;
 	color: white;
 }
+@media screen and (max-width: 768px) {
+    p{
+        background-color: pink;
+         color:white;
+     }
+ }
+ 
+ @media screen and (max-width: 480px) {
+    p{
+        background-color: pink;
+         color:white;
+     }
+ }
+
+ .pc{
+	display: block;
+  }
+  .sp{
+	display: none;
+  }
+  
+  @media only screen and (max-width: 600px){
+	.pc{
+	  display: none;
+	}
+	.sp{
+	  display: block;
+	}
+  }
