@@ -17,8 +17,8 @@
 	</header>
 	<main>
 		<h2>クイズに挑戦しよう！</h2>
-		<form method="POST">
-			<button onclick="location.href='./match.html'">対戦を始める</button>
+		<form method="POST" action="{% url 'match' %}">
+			<button onclick="location.href='/match'">対戦を始める</button>
 		</form>
 	</main>
 	<footer>
