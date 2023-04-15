@@ -7,13 +7,15 @@ body {
 }
 
 header {
-	background-color: #4CAF50;
+	background-color: pink;
 	color: white;
 	padding: 10px;
 }
 
 h1 {
-	margin: 0;
+	margin: 0 auto;
+	width: 100%;
+	height: 200px;
 }
 
 main {
@@ -28,12 +30,19 @@ h2 {
 button {
 	padding: 10px 20px;
 	border: none;
-	background-color: #4CAF50;
+	background-color: red;
 	color: white;
 	font-size: 24px;
 	cursor: pointer;
 }
 
 button:hover {
-	background-color: #3E8E41;
+	background-color: pink;
+}
+
+footer {
+	text-align: center;
+	padding: 10px;
+	background-color: pink;
+	color: white;
 }
