@@ -27,6 +27,15 @@ h2 {
 	margin-top: 0;
 }
 
+button {
+	padding: 10px 20px;
+	border: none;
+	background-color: red;
+	color: white;
+	font-size: 24px;
+	cursor: pointer;
+}
+
 .result-box {
 	display: inline-block;
 	background-color: #E0E0E0;

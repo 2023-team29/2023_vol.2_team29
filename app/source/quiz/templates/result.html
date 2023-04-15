@@ -24,6 +24,11 @@
 			<h3>Player 2</h3>
 			<p class="score">8</p>
 		</div>
+		<div>
+			<form method="POST" action="{% url 'match' %}">
+				<button onclick="location.href='/match'">対戦に戻る</button>
+			</form>
+		</div>
 	</main>
 	<footer>
 		<p>&copy; 2023 me-ask?</p>
