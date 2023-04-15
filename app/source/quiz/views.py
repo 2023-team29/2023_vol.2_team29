@@ -17,7 +17,8 @@ def match(request):
     form = AnswerForm()
     if request.method == 'POST':
         form = AnswerForm(request.POST)
-        
+        if form.is_valid():
+           answer = form.cleaned_data['subject'] 
 
 
     else:
