@@ -4,22 +4,26 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<title>みんはや - リザルト画面</title>
-	<link rel="stylesheet" href="/static/App_Folder_css/match.css">
+	<link rel="stylesheet" href="../static/css/result.css">
 </head>
 <body>
 	<header><h1>
 		<a href="#">
 			<div style="text-align: center">
-			<img src="/static/images/image (17).png" alt="">
+			<img src="../static/images/image (19).png" alt="">
 			</div></a></h1>
 			
 	</header>
 	<main>
-		<h2>不正解！</h2>
-        <h3>正解は...</h3>
-        <p></p>
-		<form method="POST" action="/match">
-			<button type="submit">次へ</button>
+		<h2>結果発表！</h2>
+		<div class="result-box">
+			<h3>Player 1</h3>
+			<p class="score">10</p>
+		</div>
+		<div class="result-box">
+			<h3>Player 2</h3>
+			<p class="score">8</p>
+		</div>
 	</main>
 	<footer>
 		<p>&copy; 2023 me-ask?</p>
