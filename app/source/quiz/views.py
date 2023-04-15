@@ -13,7 +13,7 @@ def home(request):
     """
     ホーム画面の表示
     """
-    return render(request, 'quiz/home.html', {})
+    return render(request, 'home.html', {})
 
 
 def match(request):
@@ -28,27 +28,32 @@ def match(request):
     if request.method == 'POST':
         form = AnswerForm(request.POST)
         if form.is_valid():
-           answer = form.cleaned_data['answer'] 
+           answer = form.cleaned_data['answer']
 
+           if a == b:
+               #正解
+               redirect('correct')
+           else:
+               #不正解
+               redirect('incorrect')
+           
+        else:
+            render(request, 'match.html', {'form': form})
+        
 
 
     else:
-        return render(request, 'quiz/match.html', {})    
+        return render(request, 'match.html', {'form': form})    
 
-def show_answer(request):
-    """
-    正誤表示
-    """
-    return render(request, 'quiz/answer.html', {})
 
 def correct(request):
     """
     正解画面
     """
-    return render(request, 'quiz/match.html', {})
+    return render(request, 'match.html', {})
 
 def incorrect(request):
     """
     不正解画面
     """
-    return render(request, 'quiz/match.html', {})
+    return render(request, 'match.html', {})
