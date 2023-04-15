@@ -16,6 +16,8 @@ def match(request):
     """
     form = AnswerForm()
     if request.method == 'POST':
+        form = AnswerForm(request.POST)
+        
 
 
     else:
