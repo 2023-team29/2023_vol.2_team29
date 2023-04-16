@@ -2,7 +2,14 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import AnswerForm
 import os
+import openai
+from django.views.decorators.csrf import csrf_exempt
+from django.conf import settings
+
 # Create your views here.
+
+# APIキーを設定
+openai.api_key = settings.API_KEY
 
 #問題と解答のリスト
 questions = []
