@@ -5,3 +5,4 @@ COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 RUN pip install openai
 ENV API_KEY=${API_KEY}
+RUN pip install python-dotenv
