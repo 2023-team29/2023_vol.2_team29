@@ -41,23 +41,25 @@
 		<h1>
 			<a href="#">
 				<div style="text-align: center">
-				<img src="../static/images/image (17).png" alt="">
-				</div></a>
-			</h1>
+					<img src="../static/images/image (17).png" alt="">
+				</div>
+			</a>
+		</h1>
 	</header>
 	<main>
 		<div class="player-box">
 			<h2>Player 1</h2>
 			<p class="score">0</p>
 		</div>
+	<!--
 		<div class="player-box">
 			<h2>Player 2</h2>
 			<p class="score">0</p>
 		</div>
-		
+	-->
 		<h3>問題：</h3>
-		<p class="question">問題文が表示されます</p>
-		<img id="botton-image" src="../static/images/image (16).png" alt="botton" onclick="showInputBox()">
+		<h4><p class="question">問題文が表示されます</p></h4>
+		<img id="botton-image" src="../static/images/image (22).png" alt="botton" onclick="showInputBox()">
 		<div id="input-box">
 			<form method="POST" action="/match">
 				{% csrf_token %}
