@@ -34,6 +34,19 @@
 			// 入力ボックスを非表示にする
 			document.getElementById("input-box").style.display = "none";
 		}
+		let question = "人間の体内で、糖質がエネルギー源として使用される代謝経路は何ですか？"; // 問題文
+		let index = 0; // 表示中の文字の位置を示す変数
+
+		function displayQuestion() {
+			let target = document.getElementById("question");
+			target.innerHTML += question.charAt(index);
+			index++;
+			if (index == question.length) {
+				clearInterval(timer); // 全ての文字を表示し終えたらタイマーを停止
+			}
+		}
+
+		let timer = setInterval(displayQuestion, 180); // 100ミリ秒ごとにdisplayQuestion関数を実行
 	</script>
 </head>
 <body>
@@ -58,7 +71,7 @@
 		</div>
 	-->
 		<h3>問題：</h3>
-		<h4><p class="question">問題文が表示されます</p></h4>
+		<h4><p id="question"></p></h4>
 		<img id="botton-image" src="../static/images/image (22).png" alt="botton" onclick="showInputBox()">
 		<div id="input-box">
 			<form method="POST" action="/match">
