@@ -14,6 +14,7 @@ def home(request):
     """
     ホーム画面の表示
     """
+    
     return render(request, 'home.html', {})
 
 
